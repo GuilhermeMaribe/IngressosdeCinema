@@ -12,11 +12,11 @@ import model.Filme;
 public class RepositorioFilmes {
 
  
-    private List<Filme> filmes;
+    private List<Filme> listafilmes;
     private static RepositorioFilmes instance = null;
     
     private RepositorioFilmes() {
-        filmes = new ArrayList<Filme>();
+        listafilmes = new ArrayList<Filme>();
     }
 
     public static RepositorioFilmes getInstance() {
@@ -27,19 +27,19 @@ public class RepositorioFilmes {
     
 
     public boolean add(Filme filme) {
-        return (filmes.add(filme));
+        return (listafilmes.add(filme));
     }
     
     public boolean estaVazio(){
-        return filmes.isEmpty();
+        return listafilmes.isEmpty();
     }
 
-    public List<Filme> getFilmes() {
-        return filmes;
+    public List<Filme> getListaFilmes() {
+        return listafilmes;
     }
 
     public boolean filmeExiste(String nomeFilme ) {
-        for (Filme filme : filmes) {
+        for (Filme filme : listafilmes) {
             if (filme.getNomeFilme().equals(nomeFilme)) {
                 return true;
             }
@@ -48,13 +48,14 @@ public class RepositorioFilmes {
     }
 
     public Filme buscarFilme(String nomeFilme) {
-        for (Filme filme : filmes) {
+        for (Filme filme : listafilmes) {
             if (filme.getNomeFilme().equals(nomeFilme)) {
                 return filme;
            }
         }
         return null;
-    }
+    }    
+       
 } 
     
 

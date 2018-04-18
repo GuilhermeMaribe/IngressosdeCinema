@@ -18,11 +18,7 @@ public class Filme {
         this.sinopse = sinopse;
     }
 
-    public Filme(String nome, String genero, String sinopse) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-           
+              
     public int getCodigo() {
         return codigo;
     }

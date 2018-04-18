@@ -20,13 +20,13 @@ public class MainUI {
                 case MainMenu.OP_FILMES:
                     new FilmeUI().executar();
                     break;
-                case MainMenu.OP_MEDICAMENTOS:
+                case MainMenu.OP_SESSAO:
                //     new MedicamentoUI().executar();
                     break;
-                case MainMenu.OP_CONSULTA:
+                case MainMenu.OP_SALA:
                //     new ConsultaUI().executar();
                     break;
-                case MainMenu.OP_AGENDA:
+                case MainMenu.OP_VENDAINGRESSO:
                 //    new AgendaUI().executar();
                     break;
                 case MainMenu.OP_HISTORICO:
