@@ -4,10 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/view/menu/MainMenu.java</file>
+            <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/repositorio/RepositorioSalas.java</file>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/repositorio/RepositorioFilmes.java</file>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/view/MainUI.java</file>
+            <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/repositorio/RepositorioSessoes.java</file>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/cinema/Cinema.java</file>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/view/FilmeUI.java</file>
+            <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/repositorio/RepositorioVendas.java</file>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/model/Filme.java</file>
             <file>file:/C:/Users/guilh/LPII/IngressosCinema/src/util/Console.java</file>
         </group>

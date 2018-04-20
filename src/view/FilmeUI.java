@@ -31,9 +31,6 @@ public class FilmeUI {
                     case FilmeMenu.OP_LISTAR:
                         listarFilmes();
                         break;
-                    case FilmeMenu.OP_BUSCAR_CODIGO:
-                        //buscarCodigoFilme();
-                        break;
                     case FilmeMenu.OP_BUSCAR_NOME:
                         buscarNomeFilme();
                         break;

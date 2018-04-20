@@ -4,6 +4,7 @@ package view;
 import util.Console;
 import view.menu.MainMenu;
 import repositorio.RepositorioFilmes;
+import repositorio.RepositorioSalas;
 /**
  *
  * @author guilh
@@ -21,16 +22,16 @@ public class MainUI {
                     new FilmeUI().executar();
                     break;
                 case MainMenu.OP_SESSAO:
-               //     new MedicamentoUI().executar();
+                    new SessaoUI().executar();
                     break;
                 case MainMenu.OP_SALA:
-               //     new ConsultaUI().executar();
+                    new SalaUI().executar();
                     break;
                 case MainMenu.OP_VENDAINGRESSO:
-                //    new AgendaUI().executar();
+                    new VendaIngressoUI().executar();
                     break;
                 case MainMenu.OP_HISTORICO:
-                //    new HistoricoUI().executar();
+                    new HistoricoUI().executar();
                     break;
                 case MainMenu.OP_SAIR:
                     System.out.println("Aplicação finalizada!!!");
