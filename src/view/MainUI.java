@@ -1,6 +1,8 @@
 
 package view;
 
+import java.text.ParseException;
+import java.util.InputMismatchException;
 import util.Console;
 import view.menu.MainMenu;
 import repositorio.RepositorioFilmes;
@@ -12,9 +14,10 @@ import repositorio.RepositorioSalas;
 public class MainUI {
     
         
-    public void executar() {
+    public void executar() throws ParseException {
         int opcao = 0;
         do {
+            try{
             System.out.println(MainMenu.getOpcoes());
             opcao = Console.scanInt("Digite sua opção:");
             switch (opcao) {
@@ -39,6 +42,9 @@ public class MainUI {
                 default:
                     System.out.println("Opção inválida..");
 
+                }
+            } catch (InputMismatchException ime) {
+                System.out.println("Opção Inválida! Não pode digitar letras ou caracteres especiais!");
             }
         } while (opcao != MainMenu.OP_SAIR);
     }

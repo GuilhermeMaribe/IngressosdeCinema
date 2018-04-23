@@ -90,4 +90,13 @@ public class RepositorioSessoes {
         }
         return (sessoesPorHorario);
     }
+    
+    public boolean sessaoSalaHorarioOcupados(int numero, LocalTime horario) {
+        for (Sessao sessao : listaSessoes) {
+            if ((sessao.getHorario().equals(horario)) && (sessao.getSala().getnSala() == numero)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

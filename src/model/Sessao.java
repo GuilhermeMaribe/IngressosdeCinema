@@ -21,6 +21,12 @@ public class Sessao {
         this.filme = filme;
     }
 
+    public Sessao(Sala sala, LocalTime horario, Filme filme) {
+        this.sala = sala;
+        this.horario = horario;
+        this.filme = filme;
+    }
+
     public int getCodigo() {
         return codigo;
     }

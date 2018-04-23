@@ -20,7 +20,7 @@ public class SalaMenu {
         return ("\n--------------------------------------\n"
                 + "1 - Cadastrar Salas\n"
                 + "2 - Listar Salas\n"
-                + "3 - Buscar Salapor Número\n"
+                + "3 - Buscar Sala por Número\n"
                 + "0 - Voltar"
                 + "\n--------------------------------------");
     }

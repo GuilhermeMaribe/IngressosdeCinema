@@ -20,6 +20,7 @@ public class MainMenu {
 
     public static String getOpcoes() {
         return ("\n--------------------------------------\n"
+                + "----------------CINEMA----------------\n"
                 + "1- Menu Filmes\n"
                 + "2- Menu Sessao\n"
                 + "3- Menu Sala\n"

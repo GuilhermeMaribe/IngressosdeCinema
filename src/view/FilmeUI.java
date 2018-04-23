@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.text.ParseException;
+import java.util.InputMismatchException;
 import model.Filme;
 import repositorio.RepositorioFilmes;
 import util.Console;
@@ -19,9 +21,10 @@ public class FilmeUI {
   
     
    
-    public void executar() {
+    public void executar() throws ParseException {
         int opcao = 0;
         do {
+            try{
             System.out.println(FilmeMenu.getOpcoes());
                 opcao = Console.scanInt("Digite sua opção: ");
                 switch (opcao) {
@@ -40,8 +43,9 @@ public class FilmeUI {
                     default:
                         System.out.println("Opção inválida..");
                 }
-
-            
+            } catch (InputMismatchException ime) {
+                System.out.println("Opção Inválida! Não pode digitar letras ou caracteres especiais!");
+            }
         } while (opcao != FilmeMenu.OP_VOLTAR);
     }
 
