@@ -55,7 +55,7 @@ public class SessaoUI {
 
     private void cadastrarSessao() {
         
-        System.out.println("\nRelacione a sala abaixo para a sessão: ");
+        System.out.println("\nSelecione uma sala para cadastrar nesta sessão: ");
         new SalaUI().listarSalas();
         int numero = Console.scanInt("\nDigite o Número da Sala: ");
 
@@ -67,7 +67,7 @@ public class SessaoUI {
             if (RepositorioSessoes.getInstance().sessaoSalaHorarioOcupados(numero, horario)) {
                 System.out.println("Sala e horário já estão ocupados!");
             } else {
-                System.out.println("\nRelacione o filme abaixo para a seção: ");
+                System.out.println("\nSelecione um filme para cadastrar nesta sessão: ");
                 
                 new FilmeUI().listarFilmes();
                 String nome = Console.scanString("\nDigite o Nome do filme: ");
