@@ -13,8 +13,6 @@ public class VendaIngresso {
         this.sessao = sessao;
         this.nIngressos = nIngressos;
     }
-
-    
     
     public Sessao getSessao() {
         return sessao;
@@ -23,7 +21,5 @@ public class VendaIngresso {
     public int getnIngressos() {
         return nIngressos;
     }
-    
-    
     
 }

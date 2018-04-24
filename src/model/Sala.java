@@ -12,8 +12,6 @@ public class Sala {
         this.nSala = nSala;
         this.nAssentos = nAssentos;
     }
-
-    
     
     public int getnSala() {
         return nSala;
@@ -21,8 +19,6 @@ public class Sala {
 
     public int getnAssentos() {
         return nAssentos;
-    }
-    
-    
+    } 
     
 }

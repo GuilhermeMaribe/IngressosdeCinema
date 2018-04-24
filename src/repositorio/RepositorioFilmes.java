@@ -11,7 +11,6 @@ import model.Filme;
  */
 public class RepositorioFilmes {
 
- 
     private List<Filme> listafilmes;
     private static RepositorioFilmes instance = null;
     
@@ -24,8 +23,6 @@ public class RepositorioFilmes {
         return instance;
     }
     
-    
-
     public boolean add(Filme filme) {
         return (listafilmes.add(filme));
     }

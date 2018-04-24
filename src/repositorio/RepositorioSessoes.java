@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package repositorio;
 
 import java.time.LocalTime;
@@ -16,7 +12,7 @@ import model.Sessao;
  */
 public class RepositorioSessoes {
     
-     private List<Sessao> listaSessoes;
+    private List<Sessao> listaSessoes;
     private static RepositorioSessoes instance = null;
     
     private RepositorioSessoes() {

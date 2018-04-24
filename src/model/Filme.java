@@ -9,7 +9,6 @@ public class Filme {
     private String nomeFilme;
     private String genero;
     private String sinopse;
-
     
     public Filme(int codigo, String nomeFilme, String genero, String sinopse) {
         this.codigo = codigo;
@@ -17,7 +16,6 @@ public class Filme {
         this.genero = genero;
         this.sinopse = sinopse;
     }
-
               
     public int getCodigo() {
         return codigo;
@@ -34,7 +32,5 @@ public class Filme {
     public String getSinopse() {
         return sinopse;
     }
-    
-    
     
 }

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import java.util.InputMismatchException;
@@ -16,8 +12,7 @@ import view.menu.SalaMenu;
  * @author guilh
  */
 public class SalaUI {
-    
-    
+        
     public void executar() {
         int opcao = 0;
         do {
@@ -45,7 +40,6 @@ public class SalaUI {
             }
         } while (opcao != SalaMenu.OP_VOLTAR);
     }
-
    
     private void cadastrarSalas() {
         int numero = Console.scanInt("Número da sala: ");
@@ -57,7 +51,6 @@ public class SalaUI {
             System.out.println("Sala número " + numero + " cadastrada com sucesso!");
         }
     }
-
     
     public void listarSalas() {
         System.out.println("\nLista de Salas");
@@ -73,7 +66,6 @@ public class SalaUI {
             }
         }
     }
-
     
     public void buscarNumeroSala() {
         System.out.println("\nBusca de sala por número");

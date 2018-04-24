@@ -14,14 +14,8 @@ public class Sessao {
     private LocalTime horario;
     private Filme filme;
 
-    public Sessao(int codigo, Sala sala, LocalTime horario, Filme filme) {
-        this.codigo = generateCodigo();
-        this.sala = sala;
-        this.horario = horario;
-        this.filme = filme;
-    }
-
     public Sessao(Sala sala, LocalTime horario, Filme filme) {
+        this.codigo = generateCodigo();
         this.sala = sala;
         this.horario = horario;
         this.filme = filme;
@@ -30,8 +24,7 @@ public class Sessao {
     public int getCodigo() {
         return codigo;
     }
-     
-    
+         
     public Sala getSala() {
         return sala;
     }
@@ -46,8 +39,6 @@ public class Sessao {
     
      private int generateCodigo() {
         return (CODIGO_GERADO++);
-    }
-    
-    
-    
+    } 
+     
 }

@@ -10,6 +10,7 @@ import model.Sessao;
 import repositorio.RepositorioFilmes;
 import repositorio.RepositorioSalas;
 import repositorio.RepositorioSessoes;
+import repositorio.RepositorioVendas;
 import util.Console;
 import view.menu.SessaoMenu;
 
@@ -31,15 +32,6 @@ public class SessaoUI {
                         break;
                     case SessaoMenu.OP_LISTAR:
                         listarSessoes();
-                        break;
-                    case SessaoMenu.OP_BUSCAR_FILME:
-                        buscarSessoesPorFilme();
-                        break;
-                    case SessaoMenu.OP_BUSCAR_SALA:
-                        buscarSessoesPorSala();
-                        break;
-                    case SessaoMenu.OP_BUSCAR_HORARIO:
-                        buscarSessoesPorHorario();
                         break;
                     case SessaoMenu.OP_VOLTAR:
                         System.out.println("Retornando ao menu principal..");
@@ -88,7 +80,7 @@ public class SessaoUI {
         }
     }
 
-    private void listarSessoes() {
+    void listarSessoes() {
          System.out.println("\nLista de Sessões");
         if (RepositorioSessoes.getInstance().estaVazio()) {
             System.out.println("Nenhuma sessão foi cadastrada!");
@@ -97,25 +89,15 @@ public class SessaoUI {
             System.out.println(String.format("%-15s", "CÓDIGO SESSÃO") + "\t"
                     + String.format("%-10s", "|SALA") + "\t"
                     + String.format("%-10s", "|HORÁRIO") + "\t"
-                    + String.format("%-20s", "|FILME"));
+                    + String.format("%-20s", "|FILME") + "\t"
+                    + String.format("%-10s", "|ASSENTOS DISPONÍVEIS"));
             for (Sessao sessao : RepositorioSessoes.getInstance().getListaSessoes()) {
                 System.out.println(String.format("%-15s", sessao.getCodigo()) + "\t"
                         + String.format("%-10s", "|" + sessao.getSala().getnSala()) + "\t"
                         + String.format("%-10s", "|" + sessao.getHorario()) + "\t"
-                        + String.format("%-20s", "|" + sessao.getFilme().getNomeFilme()));
+                        + String.format("%-20s", "|" + sessao.getFilme().getNomeFilme()) + "\t"
+                        + String.format("%-10s", "|" + (sessao.getSala().getnAssentos() - RepositorioVendas.getInstance().ingressosVendidosPorSessao(sessao.getCodigo()))));
             }
         }
-    }
-
-    private void buscarSessoesPorFilme() {
-        
-    }
-
-    private void buscarSessoesPorSala() {
-        
-    }
-    private void buscarSessoesPorHorario() {
-        
-    }
-
+    }    
 }

@@ -24,23 +24,20 @@ public class MainUI {
                 case MainMenu.OP_FILMES:
                     new FilmeUI().executar();
                     break;
-                case MainMenu.OP_SESSAO:
-                    new SessaoUI().executar();
-                    break;
                 case MainMenu.OP_SALA:
                     new SalaUI().executar();
+                    break;
+                case MainMenu.OP_SESSAO:
+                    new SessaoUI().executar();
                     break;
                 case MainMenu.OP_VENDAINGRESSO:
                     new VendaIngressoUI().executar();
                     break;
-                case MainMenu.OP_HISTORICO:
-                    new HistoricoUI().executar();
-                    break;
                 case MainMenu.OP_SAIR:
-                    System.out.println("Aplicação finalizada!!!");
+                    System.out.println("Aplicação finalizada!");
                     break;
                 default:
-                    System.out.println("Opção inválida..");
+                    System.out.println("Opção inválida...");
 
                 }
             } catch (InputMismatchException ime) {
