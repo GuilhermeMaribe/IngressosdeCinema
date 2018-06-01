@@ -62,10 +62,10 @@ public class SessaoUI {
                 System.out.println("\nSelecione um filme para cadastrar nesta sessão: ");
                 
                 new FilmeUI().listarFilmes();
-                String nome = Console.scanString("\nDigite o Nome do filme: ");
+                int codigo = Console.scanInt("\nDigite o codigo do filme: ");
                 
-                if (RepositorioFilmes.getInstance().filmeExiste(nome)) {
-                    Filme filme = RepositorioFilmes.getInstance().buscarFilme(nome);
+                if (RepositorioFilmes.getInstance().existeCodigoFilme(codigo)) {
+                    Filme filme = RepositorioFilmes.getInstance().buscarFilmePorCodigo(codigo);
                     
                     Sessao sessao = new Sessao(sala, horario, filme);
                     

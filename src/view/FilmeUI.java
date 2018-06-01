@@ -27,8 +27,8 @@ public class FilmeUI {
                     case FilmeMenu.OP_LISTAR:
                         listarFilmes();
                         break;
-                    case FilmeMenu.OP_BUSCAR_NOME:
-                        buscarNomeFilme();
+                    case FilmeMenu.OP_BUSCAR_COD:
+                        buscarCodFilme();
                         break;
                     case FilmeMenu.OP_VOLTAR:
                         System.out.println("Retornando ao menu principal...");
@@ -44,7 +44,7 @@ public class FilmeUI {
 
     private void cadastrarFilmes() {
         String nomeFilme = Console.scanString("Nome do Filme: ");
-        if (RepositorioFilmes.getInstance().filmeExiste(nomeFilme)) {
+        if (RepositorioFilmes.getInstance().NomeFilmeExiste(nomeFilme)) {
             System.out.println("Filme já existente no cadastro");
         } else {
             int codigo = Console.scanInt("Código: ");
@@ -75,11 +75,11 @@ public class FilmeUI {
           }
     }  
       
-    public void buscarNomeFilme() {
-          System.out.println("\nBusca de filme por Nome");
-          String nome = Console.scanString("Digite o Nome do filme: ");
-          if (RepositorioFilmes.getInstance().filmeExiste(nome)) {
-              Filme filme = RepositorioFilmes.getInstance().buscarFilme(nome);
+    public void buscarCodFilme() {
+          System.out.println("\nBusca de filme por Codigo");
+          int codigo = Console.scanInt("Digite o codigo do filme: ");
+          if (RepositorioFilmes.getInstance().existeCodigoFilme(codigo)) {
+              Filme filme = RepositorioFilmes.getInstance().buscarFilmePorCodigo(codigo);
 
               System.out.println("-----------------------------\n");
               System.out.println(String.format("%-10s", "CÓDIGO") + "\t"
